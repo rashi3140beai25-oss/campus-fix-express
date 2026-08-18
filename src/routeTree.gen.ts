@@ -10,33 +10,297 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as AnnouncementsRouteImport } from './routes/announcements'
+import { Route as CommunityRouteImport } from './routes/community'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DepartmentsRouteImport } from './routes/departments'
+import { Route as ExplorerRouteImport } from './routes/explorer'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as ImprovementsRouteImport } from './routes/improvements'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as LostFoundRouteImport } from './routes/lost-found'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReportRouteImport } from './routes/report'
+import { Route as TrackRouteImport } from './routes/track'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
+import { Route as AdminComplaintsRouteImport } from './routes/admin.complaints'
+import { Route as AdminPerformanceRouteImport } from './routes/admin.performance'
+import { Route as ComplaintIdRouteImport } from './routes/complaint.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnnouncementsRoute = AnnouncementsRouteImport.update({
+  id: '/announcements',
+  path: '/announcements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepartmentsRoute = DepartmentsRouteImport.update({
+  id: '/departments',
+  path: '/departments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExplorerRoute = ExplorerRouteImport.update({
+  id: '/explorer',
+  path: '/explorer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImprovementsRoute = ImprovementsRouteImport.update({
+  id: '/improvements',
+  path: '/improvements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LostFoundRoute = LostFoundRouteImport.update({
+  id: '/lost-found',
+  path: '/lost-found',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportRoute = ReportRouteImport.update({
+  id: '/report',
+  path: '/report',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrackRoute = TrackRouteImport.update({
+  id: '/track',
+  path: '/track',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAnalyticsRoute = AdminAnalyticsRouteImport.update({
+  id: '/admin/analytics',
+  path: '/admin/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminComplaintsRoute = AdminComplaintsRouteImport.update({
+  id: '/admin/complaints',
+  path: '/admin/complaints',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPerformanceRoute = AdminPerformanceRouteImport.update({
+  id: '/admin/performance',
+  path: '/admin/performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplaintIdRoute = ComplaintIdRouteImport.update({
+  id: '/complaint/$id',
+  path: '/complaint/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/announcements': typeof AnnouncementsRoute
+  '/community': typeof CommunityRoute
+  '/dashboard': typeof DashboardRoute
+  '/departments': typeof DepartmentsRoute
+  '/explorer': typeof ExplorerRoute
+  '/help': typeof HelpRoute
+  '/improvements': typeof ImprovementsRoute
+  '/login': typeof LoginRoute
+  '/lost-found': typeof LostFoundRoute
+  '/map': typeof MapRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/track': typeof TrackRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/complaints': typeof AdminComplaintsRoute
+  '/admin/performance': typeof AdminPerformanceRoute
+  '/complaint/$id': typeof ComplaintIdRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/announcements': typeof AnnouncementsRoute
+  '/community': typeof CommunityRoute
+  '/dashboard': typeof DashboardRoute
+  '/departments': typeof DepartmentsRoute
+  '/explorer': typeof ExplorerRoute
+  '/help': typeof HelpRoute
+  '/improvements': typeof ImprovementsRoute
+  '/login': typeof LoginRoute
+  '/lost-found': typeof LostFoundRoute
+  '/map': typeof MapRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/track': typeof TrackRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/complaints': typeof AdminComplaintsRoute
+  '/admin/performance': typeof AdminPerformanceRoute
+  '/complaint/$id': typeof ComplaintIdRoute
+  '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/announcements': typeof AnnouncementsRoute
+  '/community': typeof CommunityRoute
+  '/dashboard': typeof DashboardRoute
+  '/departments': typeof DepartmentsRoute
+  '/explorer': typeof ExplorerRoute
+  '/help': typeof HelpRoute
+  '/improvements': typeof ImprovementsRoute
+  '/login': typeof LoginRoute
+  '/lost-found': typeof LostFoundRoute
+  '/map': typeof MapRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/track': typeof TrackRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/complaints': typeof AdminComplaintsRoute
+  '/admin/performance': typeof AdminPerformanceRoute
+  '/complaint/$id': typeof ComplaintIdRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/analytics'
+    | '/announcements'
+    | '/community'
+    | '/dashboard'
+    | '/departments'
+    | '/explorer'
+    | '/help'
+    | '/improvements'
+    | '/login'
+    | '/lost-found'
+    | '/map'
+    | '/notifications'
+    | '/profile'
+    | '/report'
+    | '/track'
+    | '/admin/analytics'
+    | '/admin/complaints'
+    | '/admin/performance'
+    | '/complaint/$id'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/analytics'
+    | '/announcements'
+    | '/community'
+    | '/dashboard'
+    | '/departments'
+    | '/explorer'
+    | '/help'
+    | '/improvements'
+    | '/login'
+    | '/lost-found'
+    | '/map'
+    | '/notifications'
+    | '/profile'
+    | '/report'
+    | '/track'
+    | '/admin/analytics'
+    | '/admin/complaints'
+    | '/admin/performance'
+    | '/complaint/$id'
+    | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/analytics'
+    | '/announcements'
+    | '/community'
+    | '/dashboard'
+    | '/departments'
+    | '/explorer'
+    | '/help'
+    | '/improvements'
+    | '/login'
+    | '/lost-found'
+    | '/map'
+    | '/notifications'
+    | '/profile'
+    | '/report'
+    | '/track'
+    | '/admin/analytics'
+    | '/admin/complaints'
+    | '/admin/performance'
+    | '/complaint/$id'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  AnnouncementsRoute: typeof AnnouncementsRoute
+  CommunityRoute: typeof CommunityRoute
+  DashboardRoute: typeof DashboardRoute
+  DepartmentsRoute: typeof DepartmentsRoute
+  ExplorerRoute: typeof ExplorerRoute
+  HelpRoute: typeof HelpRoute
+  ImprovementsRoute: typeof ImprovementsRoute
+  LoginRoute: typeof LoginRoute
+  LostFoundRoute: typeof LostFoundRoute
+  MapRoute: typeof MapRoute
+  NotificationsRoute: typeof NotificationsRoute
+  ProfileRoute: typeof ProfileRoute
+  ReportRoute: typeof ReportRoute
+  TrackRoute: typeof TrackRoute
+  AdminAnalyticsRoute: typeof AdminAnalyticsRoute
+  AdminComplaintsRoute: typeof AdminComplaintsRoute
+  AdminPerformanceRoute: typeof AdminPerformanceRoute
+  ComplaintIdRoute: typeof ComplaintIdRoute
+  AdminIndexRoute: typeof AdminIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +312,171 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/announcements': {
+      id: '/announcements'
+      path: '/announcements'
+      fullPath: '/announcements'
+      preLoaderRoute: typeof AnnouncementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/departments': {
+      id: '/departments'
+      path: '/departments'
+      fullPath: '/departments'
+      preLoaderRoute: typeof DepartmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explorer': {
+      id: '/explorer'
+      path: '/explorer'
+      fullPath: '/explorer'
+      preLoaderRoute: typeof ExplorerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/improvements': {
+      id: '/improvements'
+      path: '/improvements'
+      fullPath: '/improvements'
+      preLoaderRoute: typeof ImprovementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lost-found': {
+      id: '/lost-found'
+      path: '/lost-found'
+      fullPath: '/lost-found'
+      preLoaderRoute: typeof LostFoundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/report': {
+      id: '/report'
+      path: '/report'
+      fullPath: '/report'
+      preLoaderRoute: typeof ReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/track': {
+      id: '/track'
+      path: '/track'
+      fullPath: '/track'
+      preLoaderRoute: typeof TrackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/analytics': {
+      id: '/admin/analytics'
+      path: '/admin/analytics'
+      fullPath: '/admin/analytics'
+      preLoaderRoute: typeof AdminAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/complaints': {
+      id: '/admin/complaints'
+      path: '/admin/complaints'
+      fullPath: '/admin/complaints'
+      preLoaderRoute: typeof AdminComplaintsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/performance': {
+      id: '/admin/performance'
+      path: '/admin/performance'
+      fullPath: '/admin/performance'
+      preLoaderRoute: typeof AdminPerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complaint/$id': {
+      id: '/complaint/$id'
+      path: '/complaint/$id'
+      fullPath: '/complaint/$id'
+      preLoaderRoute: typeof ComplaintIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  AnnouncementsRoute: AnnouncementsRoute,
+  CommunityRoute: CommunityRoute,
+  DashboardRoute: DashboardRoute,
+  DepartmentsRoute: DepartmentsRoute,
+  ExplorerRoute: ExplorerRoute,
+  HelpRoute: HelpRoute,
+  ImprovementsRoute: ImprovementsRoute,
+  LoginRoute: LoginRoute,
+  LostFoundRoute: LostFoundRoute,
+  MapRoute: MapRoute,
+  NotificationsRoute: NotificationsRoute,
+  ProfileRoute: ProfileRoute,
+  ReportRoute: ReportRoute,
+  TrackRoute: TrackRoute,
+  AdminAnalyticsRoute: AdminAnalyticsRoute,
+  AdminComplaintsRoute: AdminComplaintsRoute,
+  AdminPerformanceRoute: AdminPerformanceRoute,
+  ComplaintIdRoute: ComplaintIdRoute,
+  AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
